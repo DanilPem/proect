@@ -14,13 +14,16 @@
     z-index: 9999; 
 }
 
+
+.header{
+  margin-top: 0;
+}
 .logo{
     margin-top: 6px;
     margin-left: 2px;
 }
-.menu{
+.menulog{
     margin-top: 2px;
-
 }
 
 p {
@@ -32,35 +35,102 @@ body{
     background-color: black;
 }
 
-.menu1{
-    margin-top: 60px;
-    margin-left: 0px;
-    width: 60px;
-    height: 100%;
-    background-color: rgb(58, 56, 56);
+.menu{
+  margin-top: 2px;
+  margin-left: 6px;
+  height: 32px;
+  width: 32px;
 }
 
 .music{
     margin-top: 2px;
     margin-left: 6px;
+    height: 32px;
+    width: 32px;
 }
 
 .tuner{
     margin-top: 2px;
     margin-left: 6px;
+    height: 32px;
+    width: 32px;
 }
 
 .izbranoe{
     margin-top: 2px;
     margin-left: 6px;
+    height: 32px;
+    width: 32px;
 }
 
 .learning{
     margin-top: 2px;
     margin-left: 6px;
+    height: 32px;
+    width: 32px;
 }
 
 .note{
     margin-top: 2px;
     margin-left: 6px;
+    height: 32px;
+    width: 32px;  
 }
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  /*margin: 40px 0 5px;*/
+  padding: 25px 0 5px;
+  text-align: center;
+  background: rgb(58, 56, 56);
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #f80000;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #f80000;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  /*padding: 25px 0 20px; */
+  margin: 0 30px;
+}
+}
+
